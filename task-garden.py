@@ -42,6 +42,17 @@ text in the to-do list, and the hover text bubbles in the garden.
 
 from cmu_graphics import *
 import random, math
+from PIL import Image
+import os
+
+def fix_transparency(folder):
+    for filename in os.listdir(folder):
+        if filename.endswith('.PNG') or filename.endswith('.png'):
+            path = os.path.join(folder, filename)
+            img = Image.open(path).convert('RGBA')
+            img.save(path)
+
+fix_transparency('images')
 
 def onAppStart(app):
     app.width = 600
