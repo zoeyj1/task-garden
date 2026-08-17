@@ -154,7 +154,7 @@ def redrawAll(app):
             color = 'pink'
         drawCircle(0, 70+25*i, 13, fill=color, opacity=60)
         drawCircle(300, 70+25*i, 13, fill=color, opacity=60)
-    drawImage('images/garden.png', app.width/2, 70, width=app.width/2, height=app.height-70)
+    drawImage('images/garden.png', app.width/2, 70, width=app.width/2, height=app.height-70, opacity=100)
     drawRect(0, 0, app.width, 70, fill='skyBlue')
     drawLabel('Task Garden', 24, 27, size=30, align='left', font='monospace', bold=True)
     drawLabel('Check off tasks to grow your garden!', 24, 44, size=15, bold=True, align='left-top', font='monospace')
@@ -291,16 +291,16 @@ def drawSprouts(app, color, colorBoard):
                 scale = 3-(urgency)
                 colorIndex = app.typeColors.index(color)
                 if task.checked == False:
-                    drawImage(app.sprout, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=22+5*scale, align='bottom')
+                    drawImage(app.sprout, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=22+5*scale, align='bottom', opacity=100)
                 else:
                     if task.taskColor == 'lightSkyBlue':
-                        drawImage(app.blueFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom')
+                        drawImage(app.blueFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom', opacity=100)
                     elif task.taskColor == 'plum':
-                        drawImage(app.purpleFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom')
+                        drawImage(app.purpleFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom', opacity=100)
                     elif task.taskColor == 'gold':
-                        drawImage(app.yellowFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom')
+                        drawImage(app.yellowFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom', opacity=100)
                     elif task.taskColor == 'pink':
-                        drawImage(app.pinkFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom')
+                        drawImage(app.pinkFlower, 425+30*sproutIndex, 160+66*colorIndex, width=18+5*scale, height=40+5*scale, align='bottom', opacity=100)
                 
                 if task.hover == True:
                     cx = 425+30*sproutIndex
@@ -363,8 +363,8 @@ def drawTasks(app):
                 drawLabel(f'{task.task[:breakOff]}', 83, 99+30*i, size=13, align='left')
                 drawLabel(f'{task.task[breakOff:]}', 83, 115+30*i, size=13, align='left')
             drawRect(28, 100+30*i, 15, 15, fill=None, border='black', borderWidth=2)
-            drawImage(app.pencil, 213, 93+30*i, width=30, height=30, align='left-top')
-            drawImage(app.trash, 246, 93+30*i, width=30, height=30, align='left-top')
+            drawImage(app.pencil, 213, 93+30*i, width=30, height=30, align='left-top', opacity=100)
+            drawImage(app.trash, 246, 93+30*i, width=30, height=30, align='left-top', opacity=100)
             if task.checked == True:
                 drawLine(30, 105+30*i, 35, 112+30*i, lineWidth=2)
                 drawLine(35, 112+30*i, 42, 95+30*i, lineWidth=2)
