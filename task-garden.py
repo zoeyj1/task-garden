@@ -58,13 +58,13 @@ def onAppStart(app):
     app.dropConfetti = False
     app.editing = False
     
-    app.sprout = 'cmu://1073416/43484261/IMG_1475+(1).png'
-    app.blueFlower = 'cmu://1073416/43492445'
-    app.purpleFlower = 'cmu://1073416/43492439'
-    app.yellowFlower = 'cmu://1073416/43492444'
-    app.pinkFlower = 'cmu://1073416/43492442'
-    app.pencil = 'cmu://1073416/43655637/pencil'
-    app.trash = 'cmu://1073416/43655621/trash'
+    app.sprout = 'images/sprout.png'
+    app.blueFlower = 'images/blue-flower.PNG'
+    app.purpleFlower = 'images/purple-flower.PNG'
+    app.yellowFlower = 'images/yellow-flower.PNG'
+    app.pinkFlower = 'images/pink-flower.PNG'
+    app.pencil = 'images/pencil.PNG'
+    app.trash = 'images/trash.PNG'
     app.blue = app.purple = app.yellow = app.pink = ()
     app.blueFull = app.purpleFull = app.yellowFull = app.pinkFull = False
     
@@ -154,7 +154,7 @@ def redrawAll(app):
             color = 'pink'
         drawCircle(0, 70+25*i, 13, fill=color, opacity=60)
         drawCircle(300, 70+25*i, 13, fill=color, opacity=60)
-    drawImage('cmu://1073416/43492583/Untitled_Artwork+14+(1).png', app.width/2, 70, width=app.width/2, height=app.height-70)
+    drawImage('images/garden.png', app.width/2, 70, width=app.width/2, height=app.height-70)
     drawRect(0, 0, app.width, 70, fill='skyBlue')
     drawLabel('Task Garden', 24, 27, size=30, align='left', font='monospace', bold=True)
     drawLabel('Check off tasks to grow your garden!', 24, 44, size=15, bold=True, align='left-top', font='monospace')
